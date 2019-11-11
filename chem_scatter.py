@@ -78,11 +78,13 @@ def display_selected_data(selectedData):
         if len(selectedData['points']) == 0:
             return empty_plot
         match_idx = [x['pointIndex'] for x in selectedData['points']]
-        smiles_list = [Chem.MolFromSmiles(x) for x in list(df.iloc[match_idx].SMILES)]
-        name_list = list(df.iloc[match_idx].Name)
-        active_list = list(df.iloc[match_idx].is_active)
+        match_df = df.iloc[match_idx]
+        smiles_list = list(match_df.SMILES)
+        name_list = list(match_df.Name)
+        active_list = list(df.is_active)
+        mol_list = [Chem.MolFromSmiles(x) for x in smiles_list]
         name_list = [x + " " + str(y) for (x, y) in zip(name_list, active_list)]
-        img = MolsToGridImage(smiles_list[0:max_structs], molsPerRow=structs_per_row, legends=name_list)
+        img = MolsToGridImage(mol_list[0:max_structs], molsPerRow=structs_per_row, legends=name_list)
         buffered = BytesIO()
         img.save(buffered, format="JPEG")
         encoded_image = base64.b64encode(buffered.getvalue())
