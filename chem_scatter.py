@@ -93,7 +93,6 @@ def display_selected_data(selectedData):
         return empty_plot
     return src_str
 
-
 if __name__ == '__main__':
     import socket
     hostname = socket.gethostname()
