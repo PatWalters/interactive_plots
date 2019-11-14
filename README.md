@@ -1,6 +1,7 @@
 # interactive_plots
 
 Code to accompany my blog post on [Interactive Plots with Chemical Structures](https://practicalcheminformatics.blogspot.com/2019/11/interactive-plots-with-chemical.html)
+
 A demo video can be found on [YouTube](https://www.youtube.com/watch?v=27mbC023Ycc)
 
 ## Installation 
