@@ -23,12 +23,18 @@ pip install dash-daq==0.2.1
 
 
 # Running the application
-Once installed you should just be able to type: 
+Once installed you should just be able to type
 ```shell
 ./chem_scatter.py
 ```
-or if you work on an OS that doesn't enable you to make python scripts executate, you can do 
-```
+or if you work on an OS that doesn't enable you to make python scripts executable, you can do 
+```:
 python chem_scatter.py
 ```
+Once the script starts, you should see something like this
+```shell
+Running on http://127.0.0.1:8050/
+Debugger PIN: 056-419-733
+```
+The IP address will be different, it should be your IP address.  You should now be able to copy the web address adn paste it into your favorite browser to run the program. 
 
